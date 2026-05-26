@@ -1,261 +1,416 @@
 <!DOCTYPE html>
-<html class="light" lang="es">
-    <!--Landing Page Header-->
-<head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aquanetix | Inteligencia Hídrica para un Perú Sostenible</title>
-    
-    <link href="https://fonts.googleapis.com" rel="preconnect"/>
-    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-    
-    <link rel="stylesheet" href="aquanetix.css">
 
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "surface-bright": "#f6fafe",
-                        "outline-variant": "#c3c6d5",
-                        "on-surface": "#171c1f",
-                        "on-error": "#ffffff",
-                        "on-background": "#171c1f",
-                        "background": "#f6fafe",
-                        "tertiary": "#003f2e",
-                        "on-error-container": "#93000a",
-                        "surface-dim": "#d6dade",
-                        "primary-fixed": "#dae2ff",
-                        "on-primary": "#ffffff",
-                        "on-secondary-fixed-variant": "#005236",
-                        "secondary-fixed-dim": "#4edea3",
-                        "on-surface-variant": "#434653",
-                        "tertiary-fixed-dim": "#95d3ba",
-                        "on-primary-fixed": "#001946",
-                        "surface-container-low": "#f0f4f8",
-                        "tertiary-fixed": "#b0f0d6",
-                        "on-tertiary-fixed": "#002117",
-                        "surface-container-lowest": "#ffffff",
-                        "surface-container": "#eaeef2",
-                        "on-primary-fixed-variant": "#00419e",
-                        "inverse-surface": "#2c3134",
-                        "on-tertiary-fixed-variant": "#0b513d",
-                        "secondary-fixed": "#6ffbbe",
-                        "tertiary-container": "#155744",
-                        "on-tertiary": "#ffffff",
-                        "on-tertiary-container": "#8ccbb2",
-                        "secondary": "#006c49",
-                        "error-container": "#ffdad6",
-                        "secondary-container": "#6cf8bb",
-                        "primary": "#00327d",
-                        "surface-tint": "#2559bd",
-                        "surface": "#f6fafe",
-                        "inverse-primary": "#b1c5ff",
-                        "on-primary-container": "#a5bdff",
-                        "surface-variant": "#dfe3e7",
-                        "primary-container": "#0047ab",
-                        "on-secondary-container": "#00714d",
-                        "inverse-on-surface": "#edf1f5",
-                        "surface-container-high": "#e4e9ed",
-                        "error": "#ba1a1a",
-                        "outline": "#737784",
-                        "surface-container-highest": "#dfe3e7",
-                        "primary-fixed-dim": "#b1c5ff",
-                        "on-secondary-fixed": "#002113",
-                        "on-secondary": "#ffffff"
-                    },
-                    borderRadius: {
-                        "DEFAULT": "0.125rem",
-                        "lg": "0.25rem",
-                        "xl": "0.5rem",
-                        "full": "0.75rem"
-                    },
-                    fontFamily: {
-                        "headline": ["Manrope"],
-                        "body": ["Inter"],
-                        "label": ["Inter"]
-                    }
-                }
-            }
-        }
-    </script>
-</head>
-<!--Landing Page Body-->
-<body class="bg-surface text-on-surface">
-    <header class="w-full top-0 sticky z-50 bg-[#f6fafe] dark:bg-slate-950">
-        <nav class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
-            <div class="flex items-center gap-2">
-                <span class="text-2xl font-black tracking-tighter text-[#00327d] dark:text-white font-headline">Aquanetix</span>
-            </div>
-            <div class="hidden md:flex items-center gap-8 font-manrope text-sm font-semibold tracking-tight">
-                <a class="text-[#0047AB] dark:text-blue-400 font-bold border-b-2 border-[#0047AB] transition-colors duration-200" href="#">Inicio</a>
-                <a class="text-[#434653] dark:text-slate-400 hover:text-[#00327d] dark:hover:text-white transition-colors duration-200" href="#">Solución</a>
-                <a class="text-[#434653] dark:text-slate-400 hover:text-[#00327d] dark:hover:text-white transition-colors duration-200" href="#">Beneficios</a>
-            </div>
-            <div class="flex items-center gap-4">
-                <button class="bg-gradient-to-br from-primary to-primary-container text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:opacity-90 active:scale-95 transition-all duration-150 ease-in-out">
-                    Acceso al Dashboard
-                </button>
-            </div>
-        </nav>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/aquanetix.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <nav class="nav container">
+        <div class="logo">
+          <span>Aquanetix</span>
+        </div>
+        <div class="nav-links">
+          <a href="#hero" class="nav-link active" data-i18n="nav-inicio"
+            >Inicio</a
+          >
+          <a href="#problem" class="nav-link" data-i18n="nav-problema"
+            >Problema</a
+          >
+          <a href="#capabilities" class="nav-link" data-i18n="nav-capacidades"
+            >Capacidades</a
+          >
+          <a href="#about-the-team" class="nav-link" data-i18n="nav-somos"
+            >¿Quiénes somos?</a
+          >
+        </div>
+        <div style="display: flex; align-items: center">
+          <div class="lang-selector-container">
+            <button id="btn-en" class="lang-btn active">EN</button>
+            <button id="btn-es" class="lang-btn">ES</button>
+          </div>
+          <a href="#cta" class="btn" data-i18n="nav-btn-empieza"
+            >Empieza ahora</a
+          >
+        </div>
+      </nav>
     </header>
 
     <main>
-        <section class="relative overflow-hidden pt-20 pb-32 px-8">
-            <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                <div class="lg:col-span-7 z-10">
-                    <span class="inline-block px-4 py-1.5 rounded-full bg-secondary-container text-on-secondary-container text-xs font-bold tracking-widest uppercase mb-6">
-                        Tecnología para el Saneamiento
-                    </span>
-                    <h1 class="text-5xl md:text-7xl font-headline font-extrabold text-primary leading-tight tracking-tighter mb-8">
-                        Inteligencia Hídrica para un <span class="text-secondary">Perú Sostenible</span>
-                    </h1>
-                    <p class="text-on-surface-variant text-lg md:text-xl leading-relaxed mb-10 max-w-2xl">
-                        Monitoreo en tiempo real y gestión automatizada con IoT para cerrar la brecha de saneamiento. Transformamos datos complejos en decisiones operativas precisas.
-                    </p>
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <button class="bg-gradient-to-br from-primary to-primary-container text-white px-8 py-4 rounded-xl font-bold text-lg hover:opacity-95 transition-all active:scale-95">
-                            Solicitar Demo
-                        </button>
-                        <button class="bg-surface-container-high text-on-surface px-8 py-4 rounded-xl font-bold text-lg hover:bg-surface-container-highest transition-all">
-                            Conoce más
-                        </button>
-                    </div>
-                </div>
-                <div class="lg:col-span-5 relative">
-                    <div class="relative rounded-2xl overflow-hidden water-shadow">
-                       <img alt="Logo de Aquanetix" class="w-full h-[350px] md:h-[500px] object-contain bg-white rounded-2xl p-4" src="assets/images/logo-equipo.png"/>
-                    </div>
-                </div>
-            </div>
-        </section>
+      <section id="hero" class="hero container">
+        <div class="hero-grid">
+          <div>
+            <span class="badge" data-i18n="badge-saneamiento"
+              >Tecnología para el Saneamiento</span
+            >
+            <h1 class="hero-title font-headline" data-i18n="hero-title">
+              Inteligencia Hídrica para un
+              <span class="text-secondary">Perú Sostenible</span>
+            </h1>
+            <p class="hero-description" data-i18n="hero-desc">
+              Monitoreo en tiempo real y gestión automatizada con IoT para
+              cerrar la brecha de saneamiento. Transformamos datos complejos en
+              decisiones operativas precisas.
+            </p>
+            <button class="btn btn-large" data-i18n="hero-btn-more">
+              Conoce más
+            </button>
+          </div>
+          <div class="hero-image-container">
+            <img
+              class="hero-image"
+              alt="Logo de Aquanetix"
+              src="assets/images/logo-equipo.png"
+            />
+          </div>
+        </div>
+      </section>
 
-        <section class="bg-surface-container-low py-24 px-8">
-            <div class="max-w-7xl mx-auto">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-                    <div>
-                        <h2 class="text-4xl font-headline font-bold text-primary mb-8 leading-tight">
-                            Enfrentando el Desafío de la Brecha Hídrica
-                        </h2>
-                        <div class="space-y-8">
-                            <div class="bg-surface-container-lowest p-8 rounded-xl water-shadow">
-                                <span class="material-symbols-outlined text-error mb-4" style="font-size: 32px;">warning</span>
-                                <h3 class="text-2xl font-headline font-bold text-on-surface mb-4">El Problema</h3>
-                                <p class="text-on-surface-variant leading-relaxed">
-                                    Perú enfrenta una brecha de infraestructura de saneamiento estimada en <span class="text-primary font-bold">138,000 millones de soles</span>. La falta de visibilidad operativa impide una gestión eficiente de los recursos existentes.
-                                </p>
-                            </div>
-                            <div class="p-8 border-l-4 border-primary">
-                                <p class="text-xl italic text-on-surface-variant">
-                                    "La digitalización no es una opción, es la herramienta fundamental para democratizar el acceso al agua segura."
-                                </p>
-                                <p class="mt-4 font-bold text-primary">— WebWarriors Vision</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="relative bg-primary rounded-2xl p-10 text-white overflow-hidden h-full flex flex-col justify-center">
-                        <div class="absolute top-0 right-0 w-64 h-64 bg-primary-container rounded-full -mr-32 -mt-32 opacity-50"></div>
-                        <h3 class="text-3xl font-headline font-bold mb-6 relative z-10">Aquanetix Centralize</h3>
-                        <p class="text-primary-fixed leading-relaxed text-lg mb-8 relative z-10">
-                            Proporcionamos una capa de datos operativos centralizados que conecta la infraestructura física con los reguladores y EPS en tiempo real. 
-                        </p>
-                        <ul class="space-y-4 relative z-10">
-                            <li class="flex items-center gap-3">
-                                <span class="material-symbols-outlined text-secondary-container">check_circle</span>
-                                <span>Unificación de silos de información</span>
-                            </li>
-                            <li class="flex items-center gap-3">
-                                <span class="material-symbols-outlined text-secondary-container">check_circle</span>
-                                <span>Alertas tempranas de contaminación</span>
-                            </li>
-                            <li class="flex items-center gap-3">
-                                <span class="material-symbols-outlined text-secondary-container">check_circle</span>
-                                <span>Optimización de costos operativos</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+      <section id="problem" class="problem-solution">
+        <div class="container ps-grid">
+          <div>
+            <h2 class="section-title font-headline" data-i18n="prob-title">
+              Enfrentando el Desafío de la Brecha Hídrica
+            </h2>
+            <div class="problem-card">
+              <span class="material-symbols-outlined icon-error">warning</span>
+              <h3 class="font-headline" data-i18n="prob-card-title">
+                El Problema
+              </h3>
+              <p data-i18n="prob-card-desc">
+                Perú enfrenta una brecha de infraestructura de saneamiento
+                estimada en
+                <span class="highlight-text">138,000 millones de soles</span>.
+                La falta de visibilidad operativa impide una gestión eficiente
+                de los recursos existentes.
+              </p>
             </div>
-        </section>
+            <div class="quote-box">
+              <p class="quote-text" data-i18n="quote-text">
+                "La digitalización no es una opción, es la herramienta
+                fundamental para democratizar el acceso al agua segura."
+              </p>
+              <p class="quote-author">— WebWarriors Vision</p>
+            </div>
+          </div>
+          <div class="solution-card">
+            <h3 class="font-headline" data-i18n="sol-title">
+              Aquanetix Centralize
+            </h3>
+            <p data-i18n="sol-desc">
+              Proporcionamos una capa de datos operativos centralizados que
+              conecta la infraestructura física con los reguladores y EPS en
+              tiempo real.
+            </p>
+            <ul class="feature-list">
+              <li>
+                <span class="material-symbols-outlined icon-success"
+                  >check_circle</span
+                >
+                <span data-i18n="sol-feat-1"
+                  >Unificación de silos de información</span
+                >
+              </li>
+              <li>
+                <span class="material-symbols-outlined icon-success"
+                  >check_circle</span
+                >
+                <span data-i18n="sol-feat-2"
+                  >Alertas tempranas de contaminación</span
+                >
+              </li>
+              <li>
+                <span class="material-symbols-outlined icon-success"
+                  >check_circle</span
+                >
+                <span data-i18n="sol-feat-3"
+                  >Optimización de costos operativos</span
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
-        <section class="py-24 px-8">
-            <div class="max-w-7xl mx-auto">
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl font-headline font-extrabold text-primary mb-4">Capacidades del Ecosistema</h2>
-                    <p class="text-on-surface-variant max-w-2xl mx-auto">Tecnología de punta diseñada específicamente para las condiciones geográficas y regulatorias del mercado peruano.</p>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="bg-surface-container-lowest p-10 rounded-2xl water-shadow group hover:bg-primary transition-all duration-300">
-                        <div class="w-16 h-16 bg-surface-container-high rounded-xl flex items-center justify-center mb-8 group-hover:bg-primary-container transition-colors">
-                            <span class="material-symbols-outlined text-primary group-hover:text-white" style="font-size: 32px;">sensors</span>
-                        </div>
-                        <h3 class="text-2xl font-headline font-bold text-primary group-hover:text-white mb-4">Monitoreo IoT</h3>
-                        <p class="text-on-surface-variant group-hover:text-primary-fixed leading-relaxed">
-                            Recolección de datos de calidad del agua en tiempo real mediante sensores inteligentes de bajo consumo y alta precisión.
-                        </p>
-                    </div>
-                    <div class="bg-surface-container-lowest p-10 rounded-2xl water-shadow group hover:bg-primary transition-all duration-300">
-                        <div class="w-16 h-16 bg-surface-container-high rounded-xl flex items-center justify-center mb-8 group-hover:bg-primary-container transition-colors">
-                            <span class="material-symbols-outlined text-primary group-hover:text-white" style="font-size: 32px;">gavel</span>
-                        </div>
-                        <h3 class="text-2xl font-headline font-bold text-primary group-hover:text-white mb-4">Cumplimiento Normativo</h3>
-                        <p class="text-on-surface-variant group-hover:text-primary-fixed leading-relaxed">
-                            Reportes automáticos alineados a la Ley General del Ambiente, facilitando las auditorías y el cumplimiento de estándares nacionales.
-                        </p>
-                    </div>
-                    <div class="bg-surface-container-lowest p-10 rounded-2xl water-shadow group hover:bg-primary transition-all duration-300">
-                        <div class="w-16 h-16 bg-surface-container-high rounded-xl flex items-center justify-center mb-8 group-hover:bg-primary-container transition-colors">
-                            <span class="material-symbols-outlined text-primary group-hover:text-white" style="font-size: 32px;">account_tree</span>
-                        </div>
-                        <h3 class="text-2xl font-headline font-bold text-primary group-hover:text-white mb-4">Trazabilidad</h3>
-                        <p class="text-on-surface-variant group-hover:text-primary-fixed leading-relaxed">
-                            Control total para EPS y reguladores, permitiendo auditar cada gota y proceso desde la captación hasta el consumo final.
-                        </p>
-                    </div>
-                </div>
+      <section id="capabilities" class="capabilities container">
+        <div class="text-center capabilities-header">
+          <h2 class="section-title font-headline" data-i18n="cap-title">
+            Capacidades del Ecosistema
+          </h2>
+          <p data-i18n="cap-desc">
+            Tecnología de punta diseñada específicamente para las condiciones
+            geográficas y regulatorias del mercado peruano.
+          </p>
+        </div>
+        <div class="cards-grid">
+          <div class="capability-card">
+            <div class="icon-container">
+              <span class="material-symbols-outlined icon-primary"
+                >sensors</span
+              >
             </div>
-        </section>
+            <h3 class="font-headline" data-i18n="cap-card-1-title">
+              Monitoreo IoT
+            </h3>
+            <p data-i18n="cap-card-1-desc">
+              Recolección de datos de calidad del agua en tiempo real mediante
+              sensores inteligentes de bajo consumo y alta precisión.
+            </p>
+          </div>
+          <div class="capability-card">
+            <div class="icon-container">
+              <span class="material-symbols-outlined icon-primary">gavel</span>
+            </div>
+            <h3 class="font-headline" data-i18n="cap-card-2-title">
+              Cumplimiento Normativo
+            </h3>
+            <p data-i18n="cap-card-2-desc">
+              Reportes automáticos alineados a la Ley General del Ambiente,
+              facilitando las auditorías y el cumplimiento de estándares
+              nacionales.
+            </p>
+          </div>
+          <div class="capability-card">
+            <div class="icon-container">
+              <span class="material-symbols-outlined icon-primary"
+                >account_tree</span
+              >
+            </div>
+            <h3 class="font-headline" data-i18n="cap-card-3-title">
+              Trazabilidad
+            </h3>
+            <p data-i18n="cap-card-3-desc">
+              Control total para EPS y reguladores, permitiendo auditar cada
+              gota y proceso desde la captación hasta el consumo final.
+            </p>
+          </div>
+        </div>
+      </section>
 
-        <section class="max-w-7xl mx-auto px-8 py-20">
-            <div class="bg-surface-container-high rounded-[2rem] p-12 md:p-20 text-center relative overflow-hidden">
-                <div class="relative z-10">
-                    <h2 class="text-4xl md:text-5xl font-headline font-black text-primary mb-6">¿Listo para transformar su gestión hídrica?</h2>
-                    <p class="text-on-surface-variant text-lg mb-10 max-w-xl mx-auto">Únase a las organizaciones que ya están utilizando Aquanetix para construir un futuro más sostenible en el Perú.</p>
-                    <button class="bg-gradient-to-br from-primary to-primary-container text-white px-10 py-4 rounded-xl font-bold text-lg hover:shadow-lg transition-all active:scale-95">
-                        Agendar Consultoría Técnica
-                    </button>
-                </div>
-                <div class="absolute top-0 left-0 w-32 h-32 bg-secondary opacity-10 rounded-full blur-3xl"></div>
-                <div class="absolute bottom-0 right-0 w-64 h-64 bg-primary opacity-5 rounded-full blur-3xl"></div>
+      <section id="about-the-team" class="team-section container">
+        <div class="text-center capabilities-header">
+          <h2 class="section-title font-headline" data-i18n="team-title">
+            Conoce al Equipo WebWarriors
+          </h2>
+          <p data-i18n="team-subtitle">
+            Los creadores detrás de Aquanetix. Un equipo multidisciplinario
+            enfocado en brindar soluciones tecnológicas para el Perú.
+          </p>
+        </div>
+        <div class="team-grid">
+          <div class="team-card">
+            <img
+              src="assets/images/Foto_NicoPrincipal.jpeg"
+              alt="Nicolás Castro"
+              class="team-photo"
+            />
+            <h3 class="font-headline" data-i18n="team-name-1">
+              Nicolás Castro
+            </h3>
+            <p class="team-role" data-i18n="team-role-1">Team Leader</p>
+            <p class="team-desc" data-i18n="team-desc-1">
+              Estudiante universitario y líder del equipo. Se encarga de
+              coordinar el proyecto, organizar las tareas entre los integrantes
+              y asegurar que todos los objetivos de nuestra entrega se cumplan a
+              tiempo.
+            </p>
+          </div>
+          <div class="team-card">
+            <img
+              src="assets/images/fotosebastian.png"
+              alt="Sebastián Pinedo"
+              class="team-photo"
+            />
+            <h3 class="font-headline" data-i18n="team-name-2">
+              Sebastián Martín Pinedo Sánchez
+            </h3>
+            <p class="team-role" data-i18n="team-role-2">
+              Data Analyst / Investigador
+            </p>
+            <p class="team-desc" data-i18n="team-desc-2">
+              Enfocado en el análisis de datos. Investiga y estructura la
+              información del proyecto para validar los requerimientos de la
+              solución hídrica.
+            </p>
+          </div>
+
+          <div class="team-card">
+            <img
+              src="assets/images/Foto_Renzo.png"
+              alt="Renzo Bojórquez"
+              class="team-photo"
+            />
+            <h3 class="font-headline" data-i18n="team-name-3">
+              Renzo Alejandro Bojórquez Bustinza
+            </h3>
+            <p class="team-role" data-i18n="team-role-3">
+              Desarrollador Backend / Infraestructura
+            </p>
+            <p class="team-desc" data-i18n="team-desc-3">
+              Encargado de la lógica del servidor y las bases de datos para
+              asegurar el funcionamiento correcto de la aplicación.
+            </p>
+          </div>
+
+          <div class="team-card">
+            <img
+              src="assets/images/foto_Leonardo.png"
+              alt="Leonardo Cabrera"
+              class="team-photo"
+            />
+            <h3 class="font-headline" data-i18n="team-name-4">
+              Leonardo Moises Cabrera Novoa
+            </h3>
+            <p class="team-role" data-i18n="team-role-4">Diseñador UI/UX</p>
+            <p class="team-desc" data-i18n="team-desc-4">
+              Enfocado en el diseño de interfaces. Prototipa la plataforma para
+              que sea intuitiva y cumpla con los estándares visuales.
+            </p>
+          </div>
+
+          <div class="team-card">
+            <img
+              src="assets/images/foto_SebastianC.png"
+              alt="Sebastian Cochachi"
+              class="team-photo"
+            />
+            <h3 class="font-headline" data-i18n="team-name-5">
+              Sebastian Josue Cochachi Chagua
+            </h3>
+            <p class="team-role" data-i18n="team-role-5">
+              Desarrollador Frontend
+            </p>
+            <p class="team-desc" data-i18n="team-desc-5">
+              Enfocado en la construcción de la interfaz web con frameworks como
+              Vue y Angular, apoyando en la integración IoT.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="about-the-team" class="team-section container">
+        <div class="text-center capabilities-header">
+          <h2 class="section-title font-headline" data-i18n="team-title">
+            Conoce al Equipo WebWarriors
+          </h2>
+          <p data-i18n="team-subtitle">
+            Los creadores detrás de Aquanetix. Un equipo multidisciplinario
+            enfocado en brindar soluciones tecnológicas para el Perú.
+          </p>
+        </div>
+
+        <div class="team-grid"></div>
+
+        <div class="video-container">
+          <div class="video-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/ID_DEL_VIDEO"
+              title="About Deadlock Survivors Team"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            >
+            </iframe>
+          </div>
+        </div>
+      </section>
+
+      <div id="contact-modal" class="modal-overlay">
+        <div class="modal-content">
+          <span id="close-modal" class="close-btn">&times;</span>
+          <h2 class="font-headline" data-i18n="modal-title">Contáctanos</h2>
+          <p data-i18n="modal-desc">
+            ¿Tienes dudas sobre Aquanetix? El equipo WebWarriors está listo
+            para ayudarte.
+          </p>
+          <div class="contact-methods">
+            <div class="contact-item">
+              <span class="material-symbols-outlined">mail</span>
+              <p>contacto@aquanetix.pe</p>
             </div>
-        </section>
+            <div class="contact-item">
+              <span class="material-symbols-outlined">group</span>
+              <p data-i18n="modal-team">Equipo WebWarriors - UPC</p>
+            </div>
+          </div>
+          </div>
+          <button
+            class="btn btn-large"
+            id="modal-close-btn"
+            data-i18n="modal-btn-close"
+            
+            class="btn btn-large" id="modal-close-btn" data-i18n="modal-btn-close">
+              Close
+            </button>
+          </button>
+        </div>
+      </div>
+
+      <section id="cta" class="cta-section container">
+        <div class="cta-box">
+          <h2 class="cta-title font-headline" data-i18n="cta-title">
+            ¿Listo para transformar su gestión hídrica?
+          </h2>
+          <p data-i18n="cta-desc">
+            Únase a las organizaciones que ya están utilizando Aquanetix para
+            construir un futuro más sostenible en el Perú.
+          </p>
+          <a
+            href="https://aquanetix-deploy.web.app/"
+            class="btn btn-large"
+            data-i18n="cta-btn"
+          >
+            Acceso al Dashboard
+          </a>
+        </div>
+      </section>
     </main>
 
-    <footer class="w-full mt-20 border-t-0 bg-[#f0f4f8] dark:bg-slate-900 font-inter text-xs tracking-wide">
-        <div class="flex flex-col md:flex-row justify-between items-center px-12 py-10 w-full max-w-7xl mx-auto">
-            <div class="mb-8 md:mb-0">
-                <span class="text-lg font-bold text-[#00327d] dark:text-white block mb-2">WebWarriors</span>
-                <p class="text-[#434653] dark:text-slate-500">© 2026 Aquanetix. The Digital Hydrologist.</p>
-            </div>
-            <div class="flex flex-wrap justify-center gap-8">
-                <a class="text-[#434653] dark:text-slate-500 hover:text-[#00327d] dark:hover:text-blue-300 transition-all opacity-80 hover:opacity-100" href="#">Privacidad</a>
-                <a class="text-[#434653] dark:text-slate-500 hover:text-[#00327d] dark:hover:text-blue-300 transition-all opacity-80 hover:opacity-100" href="#">Términos</a>
-                <a class="text-[#434653] dark:text-slate-500 hover:text-[#00327d] dark:hover:text-blue-300 transition-all opacity-80 hover:opacity-100" href="#">Contacto</a>
-                <a class="text-[#434653] dark:text-slate-500 hover:text-[#00327d] dark:hover:text-blue-300 transition-all opacity-80 hover:opacity-100" href="#">Sostenibilidad</a>
-            </div>
-            <div class="mt-8 md:mt-0 flex gap-4">
-                <div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center text-primary">
-                    <span class="material-symbols-outlined" style="font-size: 18px;">language</span>
-                </div>
-                <div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center text-primary">
-                    <span class="material-symbols-outlined" style="font-size: 18px;">mail</span>
-                </div>
-            </div>
+    <footer class="footer">
+      <div class="container footer-content">
+        <div class="footer-brand">
+          <span>WebWarriors</span>
+          <p data-i18n="footer-copy">
+            © 2026 Aquanetix. The Digital Hydrologist.
+          </p>
         </div>
+        <div class="footer-links">
+          <a href="terms.html" data-i18n="footer-terms">Términos</a>
+          <a
+            href="javascript:void(0)"
+            id="open-contact"
+            data-i18n="footer-contact"
+            >Contacto</a
+          >
+        </div>
+        <div class="footer-social">
+          <div class="social-icon">
+            <span class="material-symbols-outlined">language</span>
+          </div>
+          <div class="social-icon">
+            <span class="material-symbols-outlined">mail</span>
+          </div>
+        </div>
+      </div>
     </footer>
-</body>
+      </div>
+    </div>
+    <script src="contact.js"></script>
+    <script src="i18n.js"></script>
+  </body>
 </html>
