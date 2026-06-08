@@ -14,31 +14,31 @@
 </head>
 <body>
 
-    <div style="min-height: 100vh; display: flex; align-items: center; justify-content: center; width: 100%; padding: 20px;">
+    <div class="login-wrapper">
         <div class="login-container">
-            <div class="brand">
-                <h1 class="brand-logo">Aquanetix</h1>
-                <p class="brand-subtitle">Plataforma de Inteligencia e Infraestructura Hídrica</p>
+            <div class="login-brand">
+                <h1 class="login-brand-logo">Aquanetix</h1>
+                <p class="login-brand-subtitle">Plataforma de Inteligencia e Infraestructura Hídrica</p>
             </div>
 
             <form action="https://aquanetix-deploy.web.app/" method="GET">
                 
-                <div class="form-group">
-                    <label class="form-label">Tipo de Organización / Segmento</label>
-                    <div class="segments-grid">
+                <div class="login-form-group">
+                    <label class="login-form-label">Tipo de Organización / Segmento</label>
+                    <div class="login-segments-grid">
                         
-                        <label class="segment-option">
+                        <label class="login-segment-option">
                             <input type="radio" name="segmento" value="eps" checked />
-                            <div class="segment-card">
-                                <span class="material-symbols-outlined icon">water_drop</span>
+                            <div class="login-segment-card">
+                                <span class="material-symbols-outlined">water_drop</span>
                                 <span class="label-text">Empresas de Agua y Alcantarillado (EPS)</span>
                             </div>
                         </label>
 
-                        <label class="segment-option">
+                        <label class="login-segment-option">
                             <input type="radio" name="segmento" value="residuos" />
-                            <div class="segment-card">
-                                <span class="material-symbols-outlined icon">delete_outline</span>
+                            <div class="login-segment-card">
+                                <span class="material-symbols-outlined">delete_outline</span>
                                 <span class="label-text">Empresas Operadoras de Residuos Sólidos</span>
                             </div>
                         </label>
@@ -46,22 +46,22 @@
                     </div>
                 </div>
 
-                <div class="form-group">
-                    <label class="form-label" for="email">Correo Electrónico Corporativo</label>
-                    <input type="email" id="email" class="input-control" placeholder="ejemplo@organizacion.pe" required />
+                <div class="login-form-group">
+                    <label class="login-form-label" for="email">Correo Electrónico Corporativo</label>
+                    <input type="email" id="email" class="login-input-control" placeholder="ejemplo@organizacion.pe" required />
                 </div>
 
-                <div class="form-group">
-                    <label class="form-label" for="password">Contraseña</label>
-                    <input type="password" id="password" class="input-control" placeholder="••••••••" required />
+                <div class="login-form-group">
+                    <label class="login-form-label" for="password">Contraseña</label>
+                    <input type="password" id="password" class="login-input-control" placeholder="••••••••" required />
                 </div>
 
-                <button type="submit" class="btn-submit">
+                <button type="submit" class="btn btn-large" style="width: 100%; margin-top: 10px;">
                     Ingresar al Dashboard
                 </button>
             </form>
 
-            <div class="footer-text">
+            <div class="login-footer-text">
                 ¿Su organización no está registrada? <a href="index.html#cta">Solicitar acceso</a>
             </div>
         </div>
