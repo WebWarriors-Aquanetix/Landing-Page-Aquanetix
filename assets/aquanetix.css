@@ -749,157 +749,154 @@ ul {
   gap: 10px;
   color: #00327d;
 }
+/* =========================================
+   ESTILOS EXCLUSIVOS PARA EL LOGIN
+   ========================================= */
+
+.login-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: var(--surface); /* Tu fondo celeste claro */
+}
+
 .login-container {
-    background: var(--surface);
-    width: 100%;
-    max-width: 500px;
-    padding: 40px;
-    border-radius: 16px;
-    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
-    border: 1px solid var(--border);
+  background-color: var(--surface-container-lowest); /* Tu fondo blanco real */
+  width: 100%;
+  max-width: 500px;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px -5px rgba(0, 50, 125, 0.15); /* Sombra azulada como tu hero */
+  border: 1px solid var(--surface-container-high);
 }
 
-.brand {
-    text-align: center;
-    margin-bottom: 32px;
+.login-brand {
+  text-align: center;
+  margin-bottom: 32px;
 }
 
-.brand-logo {
-    font-family: 'Manrope', sans-serif;
-    font-size: 28px;
-    font-weight: 800;
-    color: var(--primary);
-    letter-spacing: -0.5px;
-    margin: 0;
+.login-brand-logo {
+  font-family: 'Manrope', sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--primary);
+  letter-spacing: -0.5px;
+  margin: 0;
 }
 
-.brand-subtitle {
-    color: var(--text-secondary);
-    font-size: 14px;
-    margin-top: 6px;
+.login-brand-subtitle {
+  color: var(--on-surface-variant);
+  font-size: 14px;
+  margin-top: 6px;
 }
 
-.form-group {
-    margin-bottom: 20px;
+.login-form-group {
+  margin-bottom: 20px;
 }
 
-.form-label {
-    display: block;
-    font-size: 14px;
-    font-weight: 500;
-    margin-bottom: 8px;
-    color: var(--text-main);
+.login-form-label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--on-surface);
 }
 
-.input-control {
-    width: 100%;
-    padding: 12px 16px;
-    border-radius: 8px;
-    border: 1px solid var(--border);
-    font-family: inherit;
-    font-size: 15px;
-    box-sizing: border-box;
-    transition: all 0.2s ease;
+.login-input-control {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid var(--surface-container-high);
+  font-family: inherit;
+  font-size: 15px;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+  background-color: var(--surface-container-lowest);
 }
 
-.input-control:focus {
-    outline: none;
-    border-color: var(--primary);
-    box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
+.login-input-control:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px var(--primary-fixed);
 }
 
-/* Segmentos Objetivo - Estilo de Tarjetas Selectores */
-.segments-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-    margin-top: 8px;
+/* --- Tarjetas de Segmento --- */
+.login-segments-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 8px;
 }
 
-.segment-option {
-    position: relative;
+.login-segment-option {
+  position: relative;
 }
 
-.segment-option input[type="radio"] {
-    position: absolute;
-    opacity: 0;
-    width: 0;
-    height: 0;
+.login-segment-option input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
 
-.segment-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 16px;
-    border: 2px solid var(--border);
-    border-radius: 10px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    height: 100%;
-    box-sizing: border-box;
+.login-segment-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 16px;
+  border: 2px solid var(--surface-container-high);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  height: 100%;
+  box-sizing: border-box;
 }
 
-.segment-card .icon {
-    font-size: 28px;
-    color: var(--text-secondary);
-    margin-bottom: 10px;
+/* LA MAGIA PARA ARREGLAR LOS ÍCONOS */
+.login-segment-card .material-symbols-outlined {
+  font-family: 'Material Symbols Outlined' !important; /* Forza el ícono por sobre la fuente Inter */
+  font-size: 32px;
+  color: var(--on-surface-variant);
+  margin-bottom: 10px;
 }
 
-.segment-card span.label-text {
-    font-size: 12px;
-    font-weight: 600;
-    line-height: 1.4;
-    color: var(--text-secondary);
+.login-segment-card span.label-text {
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--on-surface-variant);
 }
 
-/* Cambios visuales cuando se selecciona una opción */
-.segment-option input[type="radio"]:checked + .segment-card {
-    border-color: var(--primary);
-    background-color: rgba(2, 132, 199, 0.04);
+/* Al seleccionar una tarjeta */
+.login-segment-option input[type="radio"]:checked + .login-segment-card {
+  border-color: var(--primary);
+  background-color: var(--primary-fixed);
 }
 
-.segment-option input[type="radio"]:checked + .segment-card .icon {
-    color: var(--primary);
+.login-segment-option input[type="radio"]:checked + .login-segment-card .material-symbols-outlined {
+  color: var(--primary);
 }
 
-.segment-option input[type="radio"]:checked + .segment-card span.label-text {
-    color: var(--primary-dark);
+.login-segment-option input[type="radio"]:checked + .login-segment-card span.label-text {
+  color: var(--primary);
 }
 
-.btn-submit {
-    width: 100%;
-    background-color: var(--primary);
-    color: white;
-    padding: 14px;
-    border: none;
-    border-radius: 8px;
-    font-family: 'Manrope', sans-serif;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-    margin-top: 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    box-sizing: border-box;
+.login-footer-text {
+  text-align: center;
+  font-size: 13px;
+  color: var(--on-surface-variant);
+  margin-top: 24px;
 }
 
-.btn-submit:hover {
-    background-color: var(--primary-dark);
+.login-footer-text a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
 }
-
-.footer-text {
-    text-align: center;
-    font-size: 13px;
-    color: var(--text-secondary);
-    margin-top: 24px;
-}
-
-.footer-text a {
-    color: var(--primary);
-    text-decoration: none;
-    font-weight: 500;
+.login-footer-text a:hover {
+  text-decoration: underline;
 }
