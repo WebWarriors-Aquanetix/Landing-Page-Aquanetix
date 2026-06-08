@@ -1,1 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aquanetix | Acceso a la Plataforma</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1==&display=swap" rel="stylesheet" />
+</head>
+<body>
 
+    <div class="login-container">
+        <div class="brand">
+            <h1 class="brand-logo">Aquanetix</h1>
+            <p class="brand-subtitle">Plataforma de Inteligencia e Infraestructura Hídrica</p>
+        </div>
+
+        <form action="https://aquanetix-deploy.web.app/" method="GET">
+            
+            <div class="form-group">
+                <label class="form-label">Tipo de Organización / Segmento</label>
+                <div class="segments-grid">
+                    
+                    <label class="segment-option">
+                        <input type="radio" name="segmento" value="eps" checked />
+                        <div class="segment-card">
+                            <span class="material-symbols-outlined icon">water_drop</span>
+                            <span class="label-text">Empresas de Agua y Alcantarillado (EPS)</span>
+                        </div>
+                    </label>
+
+                    <label class="segment-option">
+                        <input type="radio" name="segmento" value="residuos" />
+                        <div class="segment-card">
+                            <span class="material-symbols-outlined icon">delete_outline</span>
+                            <span class="label-text">Empresas Operadoras de Residuos Sólidos</span>
+                        </div>
+                    </label>
+
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="email">Correo Electrónico Corporativo</label>
+                <input type="email" id="email" class="input-control" placeholder="ejemplo@organizacion.pe" required />
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="password">Contraseña</label>
+                <input type="password" id="password" class="input-control" placeholder="••••••••" required />
+            </div>
+
+            <button type="submit" class="btn-submit">
+                Ingresar al Dashboard
+            </button>
+        </form>
+
+        <div class="footer-text">
+            ¿Su organización no está registrada? <a href="index.html#cta">Solicitar acceso</a>
+        </div>
+    </div>
+
+</body>
+</html>
