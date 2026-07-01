@@ -1,18 +1,18 @@
-/* Variables de Color */
+/* Variables de Color (Actualizadas a la paleta de la WebApp) */
 :root {
-  --primary: #00327d;
-  --primary-container: #0047ab;
-  --secondary: #006c49;
-  --secondary-container: #6cf8bb;
-  --on-secondary-container: #00714d;
-  --surface: #f6fafe;
-  --surface-container-low: #f0f4f8;
-  --surface-container-lowest: #ffffff;
-  --surface-container-high: #e4e9ed;
-  --on-surface: #171c1f;
-  --on-surface-variant: #434653;
-  --error: #ba1a1a;
-  --primary-fixed: #dae2ff;
+  --primary: #40b793; /* Verde/Teal principal de la navbar del Dashboard */
+  --primary-container: #339c7d; /* Tono más oscuro para el hover de los botones */
+  --secondary: #287a62; /* Verde oscuro para textos y acentos */
+  --secondary-container: #a5ecd6; /* Verde claro para badges y alertas de éxito */
+  --on-secondary-container: #124737; /* Texto oscuro sobre fondos verdes claros */
+  --surface: #f5f9f8; /* Fondo principal (con un levísimo toque menta/gris) */
+  --surface-container-low: #eef5f3; /* Fondos secundarios */
+  --surface-container-lowest: #ffffff; /* Blanco puro para tarjetas */
+  --surface-container-high: #e0ebe7; /* Gris/Menta para bordes y contenedores */
+  --on-surface: #1c2422; /* Color principal de texto (casi negro) */
+  --on-surface-variant: #485451; /* Color de texto secundario (gris oscuro) */
+  --error: #ba1a1a; /* Rojo para alertas de error (se mantiene) */
+  --primary-fixed: #ccf0e4; /* Fondo verde muy claro para tarjetas activas */
 }
 
 /* Reset Básico */
@@ -196,7 +196,7 @@ ul {
 .hero-image-container {
   border-radius: 1rem;
   overflow: hidden;
-  box-shadow: 0 10px 30px -5px rgba(0, 50, 125, 0.1);
+  box-shadow: 0 10px 30px -5px rgba(64, 183, 147, 0.15); /* Sombra adaptada a teal */
   background: white;
   padding: 1rem;
 }
@@ -238,7 +238,7 @@ ul {
   background-color: var(--surface-container-lowest);
   padding: 2rem;
   border-radius: 0.75rem;
-  box-shadow: 0 10px 30px -5px rgba(0, 50, 125, 0.1);
+  box-shadow: 0 10px 30px -5px rgba(64, 183, 147, 0.1); /* Sombra adaptada a teal */
   margin-bottom: 2rem;
 }
 
@@ -354,7 +354,7 @@ ul {
   background-color: var(--surface-container-lowest);
   padding: 2.5rem;
   border-radius: 1rem;
-  box-shadow: 0 10px 30px -5px rgba(0, 50, 125, 0.1);
+  box-shadow: 0 10px 30px -5px rgba(64, 183, 147, 0.1); /* Sombra adaptada a teal */
   transition: all 0.3s ease;
   cursor: default;
 }
@@ -529,7 +529,7 @@ ul {
 
 .team-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 20px 40px -10px rgba(0, 50, 125, 0.15);
+  box-shadow: 0 20px 40px -10px rgba(64, 183, 147, 0.2); /* Sombra adaptada a teal */
 }
 
 .team-photo {
@@ -581,7 +581,7 @@ ul {
   background-color: var(--surface-container-lowest);
   border-radius: 1rem;
   overflow: hidden;
-  box-shadow: 0 20px 40px -10px rgba(0, 50, 125, 0.2);
+  box-shadow: 0 20px 40px -10px rgba(64, 183, 147, 0.2); /* Sombra adaptada a teal */
   border: 4px solid var(--surface-container-lowest);
 }
 
@@ -619,7 +619,7 @@ ul {
 }
 
 .lang-btn.active {
-  background-color: #00327d; /* El azul de Aquanetix */
+  background-color: var(--primary); /* Modificado para usar la variable de la navbar */
   color: white;
 }
 
@@ -641,7 +641,7 @@ ul {
   font-size: 3rem;
   margin-top: 20px;
   margin-bottom: 10px;
-  color: #0b3d91;
+  color: var(--primary); /* Modificado para seguir la paleta */
 }
 
 .legal-date {
@@ -657,7 +657,7 @@ ul {
 }
 
 .legal-index a {
-  color: #15803d;
+  color: var(--secondary); /* Modificado para seguir la paleta */
   text-decoration: none;
   font-weight: 500;
 }
@@ -690,7 +690,7 @@ ul {
   left: 0;
   width: 100%;
   height: 100vh; /* Ocupa todo el alto de la pantalla visible */
-  background: rgba(0, 30, 80, 0.5); /* Fondo oscuro semitransparente */
+  background: rgba(40, 122, 98, 0.5); /* Fondo oscuro semitransparente con toque teal */
   backdrop-filter: blur(8px); /* Desenfoque de fondo */
   z-index: 10000; /* Por encima de todo */
 
@@ -747,8 +747,9 @@ ul {
   align-items: center;
   justify-content: center; /* Centra los iconos con el texto */
   gap: 10px;
-  color: #00327d;
+  color: var(--primary); /* Adaptado al teal */
 }
+
 /* =========================================
    ESTILOS EXCLUSIVOS PARA EL LOGIN
    ========================================= */
@@ -759,16 +760,16 @@ ul {
   align-items: center;
   justify-content: center;
   padding: 20px;
-  background-color: var(--surface); /* Tu fondo celeste claro */
+  background-color: var(--surface);
 }
 
 .login-container {
-  background-color: var(--surface-container-lowest); /* Tu fondo blanco real */
+  background-color: var(--surface-container-lowest);
   width: 100%;
   max-width: 500px;
   padding: 40px;
   border-radius: 16px;
-  box-shadow: 0 10px 30px -5px rgba(0, 50, 125, 0.15); /* Sombra azulada como tu hero */
+  box-shadow: 0 10px 30px -5px rgba(64, 183, 147, 0.15); /* Sombra adaptada a teal */
   border: 1px solid var(--surface-container-high);
 }
 
