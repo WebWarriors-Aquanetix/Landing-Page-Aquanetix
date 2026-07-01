@@ -1,18 +1,23 @@
-/* Variables de Color (Actualizadas a la paleta de la WebApp) */
+/* Variables de Color */
 :root {
-  --primary: #40b793; /* Verde/Teal principal de la navbar del Dashboard */
-  --primary-container: #339c7d; /* Tono más oscuro para el hover de los botones */
-  --secondary: #287a62; /* Verde oscuro para textos y acentos */
-  --secondary-container: #a5ecd6; /* Verde claro para badges y alertas de éxito */
-  --on-secondary-container: #124737; /* Texto oscuro sobre fondos verdes claros */
-  --surface: #f5f9f8; /* Fondo principal (con un levísimo toque menta/gris) */
-  --surface-container-low: #eef5f3; /* Fondos secundarios */
-  --surface-container-lowest: #ffffff; /* Blanco puro para tarjetas */
-  --surface-container-high: #e0ebe7; /* Gris/Menta para bordes y contenedores */
-  --on-surface: #1c2422; /* Color principal de texto (casi negro) */
-  --on-surface-variant: #485451; /* Color de texto secundario (gris oscuro) */
-  --error: #ba1a1a; /* Rojo para alertas de error (se mantiene) */
-  --primary-fixed: #ccf0e4; /* Fondo verde muy claro para tarjetas activas */
+  /* Paleta Teal (Para fondos, textos e íconos) */
+  --primary: #40b793; 
+  --primary-container: #339c7d; 
+  --secondary: #287a62; 
+  --secondary-container: #a5ecd6; 
+  --on-secondary-container: #124737; 
+  --surface: #f5f9f8; 
+  --surface-container-low: #eef5f3; 
+  --surface-container-lowest: #ffffff; 
+  --surface-container-high: #e0ebe7; 
+  --on-surface: #1c2422; 
+  --on-surface-variant: #485451; 
+  --error: #ba1a1a; 
+  --primary-fixed: #ccf0e4; 
+
+  /* Paleta Azul Original (Exclusiva para los botones) */
+  --btn-primary: #00327d;
+  --btn-primary-container: #0047ab;
 }
 
 /* Reset Básico */
@@ -104,12 +109,13 @@ ul {
   border-bottom: 2px solid var(--primary);
 }
 
+/* BOTONES PRINCIPALES (Ahora con el azul original) */
 .btn {
   display: inline-block;
   background: linear-gradient(
     to bottom right,
-    var(--primary),
-    var(--primary-container)
+    var(--btn-primary),
+    var(--btn-primary-container)
   );
   color: white;
   padding: 0.6rem 1.2rem;
@@ -196,7 +202,7 @@ ul {
 .hero-image-container {
   border-radius: 1rem;
   overflow: hidden;
-  box-shadow: 0 10px 30px -5px rgba(64, 183, 147, 0.15); /* Sombra adaptada a teal */
+  box-shadow: 0 10px 30px -5px rgba(64, 183, 147, 0.15); 
   background: white;
   padding: 1rem;
 }
@@ -238,7 +244,7 @@ ul {
   background-color: var(--surface-container-lowest);
   padding: 2rem;
   border-radius: 0.75rem;
-  box-shadow: 0 10px 30px -5px rgba(64, 183, 147, 0.1); /* Sombra adaptada a teal */
+  box-shadow: 0 10px 30px -5px rgba(64, 183, 147, 0.1);
   margin-bottom: 2rem;
 }
 
@@ -354,7 +360,7 @@ ul {
   background-color: var(--surface-container-lowest);
   padding: 2.5rem;
   border-radius: 1rem;
-  box-shadow: 0 10px 30px -5px rgba(64, 183, 147, 0.1); /* Sombra adaptada a teal */
+  box-shadow: 0 10px 30px -5px rgba(64, 183, 147, 0.1); 
   transition: all 0.3s ease;
   cursor: default;
 }
@@ -529,7 +535,7 @@ ul {
 
 .team-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 20px 40px -10px rgba(64, 183, 147, 0.2); /* Sombra adaptada a teal */
+  box-shadow: 0 20px 40px -10px rgba(64, 183, 147, 0.2); 
 }
 
 .team-photo {
@@ -539,9 +545,7 @@ ul {
   object-fit: cover;
   margin: 0 auto 1.5rem auto;
   border: 4px solid var(--primary-fixed);
-  background-color: var(
-    --surface-container-high
-  ); /* Fondo por si no carga la imagen */
+  background-color: var(--surface-container-high); 
 }
 
 .team-card h3 {
@@ -577,11 +581,11 @@ ul {
 .video-wrapper {
   position: relative;
   width: 100%;
-  padding-bottom: 56.25%; /* Proporción 16:9 para videos de YouTube */
+  padding-bottom: 56.25%;
   background-color: var(--surface-container-lowest);
   border-radius: 1rem;
   overflow: hidden;
-  box-shadow: 0 20px 40px -10px rgba(64, 183, 147, 0.2); /* Sombra adaptada a teal */
+  box-shadow: 0 20px 40px -10px rgba(64, 183, 147, 0.2); 
   border: 4px solid var(--surface-container-lowest);
 }
 
@@ -594,10 +598,10 @@ ul {
   border: none;
 }
 
-/* Contenedor del selector */
+/* Contenedor del selector de idioma */
 .lang-selector-container {
   display: flex;
-  background-color: #f1f5f9; /* Un gris muy claro */
+  background-color: #f1f5f9; 
   padding: 4px;
   border-radius: 12px;
   border: 1px solid #e2e8f0;
@@ -605,7 +609,7 @@ ul {
   margin-right: 15px;
 }
 
-/* Estilo base de los botones */
+/* BOTONES DE IDIOMA */
 .lang-btn {
   padding: 6px 16px;
   border-radius: 8px;
@@ -619,7 +623,7 @@ ul {
 }
 
 .lang-btn.active {
-  background-color: var(--primary); /* Modificado para usar la variable de la navbar */
+  background-color: var(--btn-primary); /* Se regresa al azul oscuro */
   color: white;
 }
 
@@ -641,7 +645,7 @@ ul {
   font-size: 3rem;
   margin-top: 20px;
   margin-bottom: 10px;
-  color: var(--primary); /* Modificado para seguir la paleta */
+  color: var(--primary); 
 }
 
 .legal-date {
@@ -657,7 +661,7 @@ ul {
 }
 
 .legal-index a {
-  color: var(--secondary); /* Modificado para seguir la paleta */
+  color: var(--secondary); 
   text-decoration: none;
   font-weight: 500;
 }
@@ -684,15 +688,15 @@ ul {
 
 /* --- Estilos del Pop-up Centrado --- */
 .modal-overlay {
-  display: none; /* Se cambia a 'flex' vía JS */
-  position: fixed; /* Se mantiene fijo respecto a la ventana, no al documento */
+  display: none; 
+  position: fixed; 
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh; /* Ocupa todo el alto de la pantalla visible */
-  background: rgba(40, 122, 98, 0.5); /* Fondo oscuro semitransparente con toque teal */
-  backdrop-filter: blur(8px); /* Desenfoque de fondo */
-  z-index: 10000; /* Por encima de todo */
+  height: 100vh; 
+  background: rgba(40, 122, 98, 0.5); 
+  backdrop-filter: blur(8px); 
+  z-index: 10000; 
 
   /* Centrado absoluto */
   justify-content: center;
@@ -745,9 +749,9 @@ ul {
 .contact-item {
   display: flex;
   align-items: center;
-  justify-content: center; /* Centra los iconos con el texto */
+  justify-content: center; 
   gap: 10px;
-  color: var(--primary); /* Adaptado al teal */
+  color: var(--primary); 
 }
 
 /* =========================================
@@ -769,7 +773,7 @@ ul {
   max-width: 500px;
   padding: 40px;
   border-radius: 16px;
-  box-shadow: 0 10px 30px -5px rgba(64, 183, 147, 0.15); /* Sombra adaptada a teal */
+  box-shadow: 0 10px 30px -5px rgba(64, 183, 147, 0.15); 
   border: 1px solid var(--surface-container-high);
 }
 
@@ -858,7 +862,7 @@ ul {
 
 /* LA MAGIA PARA ARREGLAR LOS ÍCONOS */
 .login-segment-card .material-symbols-outlined {
-  font-family: 'Material Symbols Outlined' !important; /* Forza el ícono por sobre la fuente Inter */
+  font-family: 'Material Symbols Outlined' !important; 
   font-size: 32px;
   color: var(--on-surface-variant);
   margin-bottom: 10px;
