@@ -515,10 +515,21 @@ ul {
 }
 
 /* Team Section */
-/* Team Section */
 .team-section {
   padding: 6rem 0;
-  background-color: var(--surface);
+  background-color: var(--primary); /* El fondo principal */
+  
+  /* TRUCO CSS: Expande el fondo de extremo a extremo sin romper tu HTML */
+  box-shadow: 0 0 0 100vmax var(--primary);
+  clip-path: inset(0 -100vmax);
+}
+
+/* Cambiamos el título y texto de la sección a blanco para que se lean sobre el fondo celeste */
+.team-section .section-title {
+  color: white;
+}
+.team-section .capabilities-header p {
+  color: var(--primary-fixed); /* Un celeste súper clarito casi blanco */
 }
 
 .team-grid {
@@ -529,23 +540,22 @@ ul {
   margin-bottom: 3rem;
 }
 
-/* AQUÍ EMPIEZAN LOS CAMBIOS DE LA TARJETA */
+/* Revertimos las tarjetas a su estilo original (Cajas blancas y limpias) */
 .team-card {
   flex: 1 1 calc(33.333% - 2rem);
   min-width: 300px;
   max-width: 400px;
-  background-color: var(--primary); /* Fondo sólido igual al de Aquanetix Centralize */
-  color: white; /* Color base del texto a blanco */
+  background: #ffffff;
   padding: 2rem;
   border-radius: 20px;
-  box-shadow: 0 10px 25px rgba(170, 219, 225, 0.4);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   text-align: center;
   transition: all 0.3s ease;
 }
 
 .team-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 20px 40px -10px rgba(170, 219, 225, 0.7); 
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.25); 
 }
 
 .team-photo {
@@ -554,13 +564,13 @@ ul {
   border-radius: 50%;
   object-fit: cover;
   margin: 0 auto 1.5rem auto;
-  border: 4px solid var(--primary-fixed); /* Borde de la foto en celeste claro */
+  border: 4px solid var(--primary-fixed);
   background-color: var(--surface-container-high); 
 }
 
 .team-card h3 {
   font-size: 1.125rem;
-  color: white; /* Nombre del integrante en blanco puro */
+  color: var(--primary);
   margin-bottom: 0.5rem;
   line-height: 1.3;
 }
@@ -568,7 +578,7 @@ ul {
 .team-role {
   font-weight: 700;
   font-size: 0.875rem;
-  color: var(--primary-fixed); /* Rol en celeste clarito para hacer contraste */
+  color: var(--secondary);
   margin-bottom: 1rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -576,7 +586,7 @@ ul {
 
 .team-desc {
   font-size: 0.875rem;
-  color: var(--surface-container-low); /* Descripción en un tono blanco apagado para lectura cómoda */
+  color: var(--on-surface-variant);
   line-height: 1.5;
 }
 
