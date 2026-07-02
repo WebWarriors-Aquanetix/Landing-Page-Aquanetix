@@ -927,3 +927,63 @@ ul {
 .login-footer-text a:hover {
   text-decoration: underline;
 }
+/* --- Mejora Visual: Estilos para la nueva sección de Segmentos --- */
+.segments-section {
+  padding: 6rem 0;
+}
+
+.segments-header {
+  margin-bottom: 4rem;
+}
+
+.segments-subtitle {
+  color: var(--on-surface-variant);
+  font-size: 1.1rem;
+  margin-top: 1rem;
+}
+
+.segments-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .segments-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.segment-card {
+  background: white;
+  padding: 3rem;
+  border-radius: 2rem; /* Bordes más redondeados dan un look más moderno */
+  border: 1px solid var(--surface-container-high);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.segment-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px -10px rgba(84, 170, 181, 0.2); /* Sombra suave con tu color primario */
+}
+
+.icon-segment {
+  font-size: 3rem;
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+  background: var(--primary-fixed);
+  padding: 1rem;
+  border-radius: 1.5rem;
+}
+
+/* --- Ajuste Global para que todo se vea más pro --- */
+/* Aumentamos el espaciado de todas las secciones para que no se sientan apretadas */
+main section {
+  padding: 5rem 0 !important;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
