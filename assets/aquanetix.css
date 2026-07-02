@@ -515,6 +515,7 @@ ul {
 }
 
 /* Team Section */
+/* Team Section */
 .team-section {
   padding: 6rem 0;
   background-color: var(--surface);
@@ -528,20 +529,23 @@ ul {
   margin-bottom: 3rem;
 }
 
+/* AQUÍ EMPIEZAN LOS CAMBIOS DE LA TARJETA */
 .team-card {
   flex: 1 1 calc(33.333% - 2rem);
   min-width: 300px;
   max-width: 400px;
-  background: #ffffff;
+  background-color: var(--primary); /* Fondo sólido igual al de Aquanetix Centralize */
+  color: white; /* Color base del texto a blanco */
   padding: 2rem;
   border-radius: 20px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 25px rgba(170, 219, 225, 0.4);
   text-align: center;
+  transition: all 0.3s ease;
 }
 
 .team-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 20px 40px -10px rgba(170, 219, 225, 0.5); 
+  box-shadow: 0 20px 40px -10px rgba(170, 219, 225, 0.7); 
 }
 
 .team-photo {
@@ -550,13 +554,13 @@ ul {
   border-radius: 50%;
   object-fit: cover;
   margin: 0 auto 1.5rem auto;
-  border: 4px solid var(--primary-fixed);
+  border: 4px solid var(--primary-fixed); /* Borde de la foto en celeste claro */
   background-color: var(--surface-container-high); 
 }
 
 .team-card h3 {
   font-size: 1.125rem;
-  color: var(--primary);
+  color: white; /* Nombre del integrante en blanco puro */
   margin-bottom: 0.5rem;
   line-height: 1.3;
 }
@@ -564,7 +568,7 @@ ul {
 .team-role {
   font-weight: 700;
   font-size: 0.875rem;
-  color: var(--secondary);
+  color: var(--primary-fixed); /* Rol en celeste clarito para hacer contraste */
   margin-bottom: 1rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -572,7 +576,7 @@ ul {
 
 .team-desc {
   font-size: 0.875rem;
-  color: var(--on-surface-variant);
+  color: var(--surface-container-low); /* Descripción en un tono blanco apagado para lectura cómoda */
   line-height: 1.5;
 }
 
