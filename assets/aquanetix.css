@@ -1,19 +1,25 @@
-/* Variables de Color */
+/* Variables de Color (Paleta Celeste #AADBE1) */
 :root {
-  /* Paleta Teal (Para fondos, textos e íconos) */
-  --primary: #40b793; 
-  --primary-container: #339c7d; 
-  --secondary: #287a62; 
-  --secondary-container: #a5ecd6; 
-  --on-secondary-container: #124737; 
-  --surface: #f5f9f8; 
-  --surface-container-low: #eef5f3; 
+  /* Tono base oscurecido para textos e íconos (para asegurar legibilidad) */
+  --primary: #54aab5; 
+  
+  /* TU CELESTE ELEGIDO: Protagonista en fondos, hovers y acentos */
+  --primary-container: #aadbe1; 
+  
+  --secondary: #2f6973; /* Tono oscuro para subtítulos y contrastes */
+  --secondary-container: #aadbe1; /* Badge superior también usa tu celeste */
+  --on-secondary-container: #11363c; /* Texto oscuro sobre el celeste */
+  
+  /* Fondos de la página con un toque ultra-ligero de celeste */
+  --surface: #f4fbFC; 
+  --surface-container-low: #e6f6f8; 
   --surface-container-lowest: #ffffff; 
-  --surface-container-high: #e0ebe7; 
-  --on-surface: #1c2422; 
-  --on-surface-variant: #485451; 
+  --surface-container-high: #cbebed; 
+  
+  --on-surface: #102022; 
+  --on-surface-variant: #395459; 
   --error: #ba1a1a; 
-  --primary-fixed: #ccf0e4; 
+  --primary-fixed: #daf1f4; 
 
   /* Paleta Azul Original (Exclusiva para los botones) */
   --btn-primary: #00327d;
@@ -109,7 +115,7 @@ ul {
   border-bottom: 2px solid var(--primary);
 }
 
-/* BOTONES PRINCIPALES (Ahora con el azul original) */
+/* BOTONES PRINCIPALES (Azul original) */
 .btn {
   display: inline-block;
   background: linear-gradient(
@@ -202,7 +208,7 @@ ul {
 .hero-image-container {
   border-radius: 1rem;
   overflow: hidden;
-  box-shadow: 0 10px 30px -5px rgba(64, 183, 147, 0.15); 
+  box-shadow: 0 10px 30px -5px rgba(170, 219, 225, 0.4); 
   background: white;
   padding: 1rem;
 }
@@ -244,7 +250,7 @@ ul {
   background-color: var(--surface-container-lowest);
   padding: 2rem;
   border-radius: 0.75rem;
-  box-shadow: 0 10px 30px -5px rgba(64, 183, 147, 0.1);
+  box-shadow: 0 10px 30px -5px rgba(170, 219, 225, 0.3);
   margin-bottom: 2rem;
 }
 
@@ -360,7 +366,7 @@ ul {
   background-color: var(--surface-container-lowest);
   padding: 2.5rem;
   border-radius: 1rem;
-  box-shadow: 0 10px 30px -5px rgba(64, 183, 147, 0.1); 
+  box-shadow: 0 10px 30px -5px rgba(170, 219, 225, 0.3); 
   transition: all 0.3s ease;
   cursor: default;
 }
@@ -535,7 +541,7 @@ ul {
 
 .team-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 20px 40px -10px rgba(64, 183, 147, 0.2); 
+  box-shadow: 0 20px 40px -10px rgba(170, 219, 225, 0.5); 
 }
 
 .team-photo {
@@ -585,7 +591,7 @@ ul {
   background-color: var(--surface-container-lowest);
   border-radius: 1rem;
   overflow: hidden;
-  box-shadow: 0 20px 40px -10px rgba(64, 183, 147, 0.2); 
+  box-shadow: 0 20px 40px -10px rgba(170, 219, 225, 0.4); 
   border: 4px solid var(--surface-container-lowest);
 }
 
@@ -623,7 +629,7 @@ ul {
 }
 
 .lang-btn.active {
-  background-color: var(--btn-primary); /* Se regresa al azul oscuro */
+  background-color: var(--btn-primary); 
   color: white;
 }
 
@@ -694,7 +700,7 @@ ul {
   left: 0;
   width: 100%;
   height: 100vh; 
-  background: rgba(40, 122, 98, 0.5); 
+  background: rgba(47, 105, 115, 0.6); /* Fondo oscuro con el tono secondary */
   backdrop-filter: blur(8px); 
   z-index: 10000; 
 
@@ -773,7 +779,7 @@ ul {
   max-width: 500px;
   padding: 40px;
   border-radius: 16px;
-  box-shadow: 0 10px 30px -5px rgba(64, 183, 147, 0.15); 
+  box-shadow: 0 10px 30px -5px rgba(170, 219, 225, 0.4); 
   border: 1px solid var(--surface-container-high);
 }
 
