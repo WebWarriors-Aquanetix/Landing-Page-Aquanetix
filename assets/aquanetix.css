@@ -517,19 +517,20 @@ ul {
 /* Team Section */
 .team-section {
   padding: 6rem 0;
-  background-color: var(--primary); /* El fondo principal */
+  /* Usamos el mismo color celeste súper suave de la sección de arriba */
+  background-color: var(--surface-container-low); 
   
-  /* TRUCO CSS: Expande el fondo de extremo a extremo sin romper tu HTML */
-  box-shadow: 0 0 0 100vmax var(--primary);
+  /* Mantenemos el truco de expansión, pero con el nuevo color suave */
+  box-shadow: 0 0 0 100vmax var(--surface-container-low);
   clip-path: inset(0 -100vmax);
 }
 
-/* Cambiamos el título y texto de la sección a blanco para que se lean sobre el fondo celeste */
+/* Como el fondo ahora es claro, regresamos el título y descripción a sus colores originales */
 .team-section .section-title {
-  color: white;
+  color: var(--primary);
 }
 .team-section .capabilities-header p {
-  color: var(--primary-fixed); /* Un celeste súper clarito casi blanco */
+  color: var(--on-surface-variant);
 }
 
 .team-grid {
@@ -540,7 +541,7 @@ ul {
   margin-bottom: 3rem;
 }
 
-/* Revertimos las tarjetas a su estilo original (Cajas blancas y limpias) */
+/* Tarjetas del equipo limpias y blancas */
 .team-card {
   flex: 1 1 calc(33.333% - 2rem);
   min-width: 300px;
@@ -548,14 +549,15 @@ ul {
   background: #ffffff;
   padding: 2rem;
   border-radius: 20px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  /* Sombra sutil para que resalten sobre el fondo claro */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); 
   text-align: center;
   transition: all 0.3s ease;
 }
 
 .team-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.25); 
+  box-shadow: 0 20px 40px -10px rgba(170, 219, 225, 0.5); 
 }
 
 .team-photo {
