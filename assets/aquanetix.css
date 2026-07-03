@@ -41,10 +41,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-h1,
-h2,
-h3,
-.font-headline {
+h1, h2, h3, .font-headline {
   font-family: "Manrope", sans-serif;
 }
 
@@ -106,8 +103,7 @@ ul {
   transition: color 0.2s;
 }
 
-.nav-link:hover,
-.nav-link.active {
+.nav-link:hover, .nav-link.active {
   color: var(--primary);
 }
 
@@ -331,6 +327,219 @@ ul {
   color: var(--secondary-container);
 }
 
+/* Banner de Métricas */
+.metrics-banner {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  padding: 3rem 0;
+  color: white;
+  margin-top: -3rem;
+  position: relative;
+  z-index: 10;
+}
+
+.metrics-grid {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
+  text-align: center;
+}
+
+.metric-number {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  color: var(--surface-container-lowest);
+  text-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.metric-label {
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--primary-fixed);
+}
+
+/* =========================================
+   DISEÑO PROFESIONAL DE SEGMENTOS (V2)
+   ========================================= */
+
+.pro-segments-section {
+  padding: 8rem 0;
+}
+
+.segments-header {
+  margin-bottom: 4rem;
+}
+
+.pro-segments-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  margin-top: 4rem;
+}
+
+/* La tarjeta principal */
+.pro-segment-card {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+  border: 1px solid var(--surface-container-high);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pro-segment-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 50px rgba(84, 170, 181, 0.2);
+}
+
+/* Pantallas grandes */
+@media(min-width: 992px) {
+  .pro-segment-card {
+      flex-direction: row;
+      align-items: stretch;
+  }
+  .pro-segment-card.reverse {
+      flex-direction: row-reverse;
+  }
+}
+
+/* Imagen */
+.pro-segment-image {
+  flex: 1;
+  min-height: 350px;
+}
+
+.pro-segment-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Contenido */
+.pro-segment-body {
+  flex: 1.1;
+  padding: 4rem 3.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.pro-badge {
+  align-self: flex-start;
+  background: var(--primary-fixed);
+  color: var(--on-secondary-container);
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1.5rem;
+}
+
+.pro-segment-body h3 {
+  font-size: 2.3rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.pro-lead {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--on-surface);
+  margin-bottom: 1rem;
+  border-left: 4px solid var(--primary);
+  padding-left: 1rem;
+  line-height: 1.4;
+}
+
+.pro-text {
+  color: var(--on-surface-variant);
+  line-height: 1.7;
+  font-size: 1.05rem;
+  margin-bottom: 2rem;
+}
+
+.pro-highlight {
+  background: var(--surface-container-low);
+  border: 1px solid var(--surface-container-high);
+  padding: 1.2rem;
+  border-radius: 12px;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+.pro-highlight .material-symbols-outlined {
+  color: var(--primary);
+  font-size: 2.2rem;
+  background: white;
+  padding: 0.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.pro-highlight-text strong {
+  display: block;
+  color: var(--primary);
+  font-size: 1.1rem;
+  margin-bottom: 0.2rem;
+  font-family: 'Manrope', sans-serif;
+}
+
+.pro-highlight-text span {
+  font-size: 0.95rem;
+  color: var(--on-surface-variant);
+  line-height: 1.4;
+}
+
+.pro-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.pro-features li {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: var(--on-surface);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.pro-features .material-symbols-outlined {
+  color: var(--primary);
+}
+
+.pro-btn {
+  align-self: flex-start;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  padding: 0.8rem 2rem;
+  border-radius: 8px;
+  font-weight: 700;
+  transition: all 0.3s;
+  text-decoration: none;
+}
+
+.pro-btn:hover {
+  background: var(--primary);
+  color: white;
+  transform: translateY(-2px);
+}
+
 /* Capabilities Section */
 .capabilities {
   padding: 6rem 0;
@@ -420,6 +629,106 @@ ul {
 
 .capability-card:hover p {
   color: var(--primary-fixed);
+}
+
+/* Team Section */
+.team-section {
+  padding: 6rem 0;
+  background-color: var(--surface-container-low); 
+  box-shadow: 0 0 0 100vmax var(--surface-container-low);
+  clip-path: inset(0 -100vmax);
+}
+
+.team-section .section-title {
+  color: var(--primary);
+}
+.team-section .capabilities-header p {
+  color: var(--on-surface-variant);
+}
+
+.team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.team-card {
+  flex: 1 1 calc(33.333% - 2rem);
+  min-width: 300px;
+  max-width: 400px;
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); 
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px -10px rgba(170, 219, 225, 0.5); 
+}
+
+.team-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 1.5rem auto;
+  border: 4px solid var(--primary-fixed);
+  background-color: var(--surface-container-high); 
+}
+
+.team-card h3 {
+  font-size: 1.125rem;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.team-role {
+  font-weight: 700;
+  font-size: 0.875rem;
+  color: var(--secondary);
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.team-desc {
+  font-size: 0.875rem;
+  color: var(--on-surface-variant);
+  line-height: 1.5;
+}
+
+/* Video Section */
+.video-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 4rem auto 0;
+  clear: both;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  background-color: var(--surface-container-lowest);
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 20px 40px -10px rgba(170, 219, 225, 0.4); 
+  border: 4px solid var(--surface-container-lowest);
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
 }
 
 /* CTA Section */
@@ -514,113 +823,7 @@ ul {
   color: var(--primary);
 }
 
-/* Team Section */
-.team-section {
-  padding: 6rem 0;
-  /* Usamos el mismo color celeste súper suave de la sección de arriba */
-  background-color: var(--surface-container-low); 
-  
-  /* Mantenemos el truco de expansión, pero con el nuevo color suave */
-  box-shadow: 0 0 0 100vmax var(--surface-container-low);
-  clip-path: inset(0 -100vmax);
-}
-
-/* Como el fondo ahora es claro, regresamos el título y descripción a sus colores originales */
-.team-section .section-title {
-  color: var(--primary);
-}
-.team-section .capabilities-header p {
-  color: var(--on-surface-variant);
-}
-
-.team-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-  margin-bottom: 3rem;
-}
-
-/* Tarjetas del equipo limpias y blancas */
-.team-card {
-  flex: 1 1 calc(33.333% - 2rem);
-  min-width: 300px;
-  max-width: 400px;
-  background: #ffffff;
-  padding: 2rem;
-  border-radius: 20px;
-  /* Sombra sutil para que resalten sobre el fondo claro */
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); 
-  text-align: center;
-  transition: all 0.3s ease;
-}
-
-.team-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 20px 40px -10px rgba(170, 219, 225, 0.5); 
-}
-
-.team-photo {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin: 0 auto 1.5rem auto;
-  border: 4px solid var(--primary-fixed);
-  background-color: var(--surface-container-high); 
-}
-
-.team-card h3 {
-  font-size: 1.125rem;
-  color: var(--primary);
-  margin-bottom: 0.5rem;
-  line-height: 1.3;
-}
-
-.team-role {
-  font-weight: 700;
-  font-size: 0.875rem;
-  color: var(--secondary);
-  margin-bottom: 1rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-.team-desc {
-  font-size: 0.875rem;
-  color: var(--on-surface-variant);
-  line-height: 1.5;
-}
-
-/* Video Section */
-.video-container {
-  width: 100%;
-  max-width: 900px;
-  margin: 4rem auto 0;
-  clear: both;
-}
-
-.video-wrapper {
-  position: relative;
-  width: 100%;
-  padding-bottom: 56.25%;
-  background-color: var(--surface-container-lowest);
-  border-radius: 1rem;
-  overflow: hidden;
-  box-shadow: 0 20px 40px -10px rgba(170, 219, 225, 0.4); 
-  border: 4px solid var(--surface-container-lowest);
-}
-
-.video-wrapper iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
-}
-
-/* Contenedor del selector de idioma */
+/* Selectores y Modal */
 .lang-selector-container {
   display: flex;
   background-color: #f1f5f9; 
@@ -631,7 +834,6 @@ ul {
   margin-right: 15px;
 }
 
-/* BOTONES DE IDIOMA */
 .lang-btn {
   padding: 6px 16px;
   border-radius: 8px;
@@ -653,62 +855,6 @@ ul {
   background-color: #e2e8f0;
 }
 
-.legal-page {
-  padding-top: 60px;
-  padding-bottom: 80px;
-  max-width: 900px;
-}
-
-.legal-header {
-  margin-bottom: 40px;
-}
-
-.legal-title {
-  font-size: 3rem;
-  margin-top: 20px;
-  margin-bottom: 10px;
-  color: var(--primary); 
-}
-
-.legal-date {
-  color: #6b7280;
-  font-size: 0.95rem;
-}
-
-.legal-index {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  margin-bottom: 60px;
-}
-
-.legal-index a {
-  color: var(--secondary); 
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.legal-index a:hover {
-  text-decoration: underline;
-}
-
-.legal-section {
-  margin-bottom: 50px;
-  scroll-margin-top: 100px;
-}
-
-.legal-section h2 {
-  margin-bottom: 15px;
-  color: #111827;
-  font-size: 2rem;
-}
-
-.legal-section p {
-  line-height: 1.9;
-  color: #374151;
-}
-
-/* --- Estilos del Pop-up Centrado --- */
 .modal-overlay {
   display: none; 
   position: fixed; 
@@ -716,11 +862,9 @@ ul {
   left: 0;
   width: 100%;
   height: 100vh; 
-  background: rgba(47, 105, 115, 0.6); /* Fondo oscuro con el tono secondary */
+  background: rgba(47, 105, 115, 0.6);
   backdrop-filter: blur(8px); 
   z-index: 10000; 
-
-  /* Centrado absoluto */
   justify-content: center;
   align-items: center;
 }
@@ -734,20 +878,12 @@ ul {
   position: relative;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
   text-align: center;
-
-  /* Animación de entrada */
   animation: modalAppear 0.3s ease-out;
 }
 
 @keyframes modalAppear {
-  from {
-    opacity: 0;
-    transform: scale(0.9);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
 }
 
 .close-btn {
@@ -774,447 +910,4 @@ ul {
   justify-content: center; 
   gap: 10px;
   color: var(--primary); 
-}
-
-
-/* --- Mejora Visual: Estilos para la nueva sección de Segmentos --- */
-.segments-section {
-  padding: 6rem 0;
-}
-
-.segments-header {
-  margin-bottom: 4rem;
-}
-
-.segments-subtitle {
-  color: var(--on-surface-variant);
-  font-size: 1.1rem;
-  margin-top: 1rem;
-}
-
-.segments-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-}
-
-@media (min-width: 768px) {
-  .segments-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-.segment-card {
-  background: white;
-  padding: 3rem;
-  border-radius: 2rem; /* Bordes más redondeados dan un look más moderno */
-  border: 1px solid var(--surface-container-high);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-align: center;
-}
-
-.segment-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 40px -10px rgba(84, 170, 181, 0.2); /* Sombra suave con tu color primario */
-}
-
-.icon-segment {
-  font-size: 3rem;
-  color: var(--primary);
-  margin-bottom: 1.5rem;
-  background: var(--primary-fixed);
-  padding: 1rem;
-  border-radius: 1.5rem;
-}
-
-/* --- Ajuste Global para que todo se vea más pro --- */
-/* Aumentamos el espaciado de todas las secciones para que no se sientan apretadas */
-main section {
-  padding: 5rem 0 !important;
-}
-
-.section-title {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-/* =========================================
-   SÚPER TARJETAS ZIG-ZAG (DISEÑO 20/20)
-   ========================================= */
-
-.segments-pro {
-  padding: 8rem 0;
-}
-
-.segments-pro-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 5rem; /* Gran separación entre los bloques */
-  margin-top: 4rem;
-}
-
-/* El contenedor principal de la tarjeta */
-.segment-super-card {
-  display: flex;
-  flex-direction: column;
-  background: #ffffff;
-  border-radius: 24px;
-  overflow: hidden;
-  box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.08); /* Sombra difuminada muy elegante */
-  border: 1px solid var(--surface-container-high);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.segment-super-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 30px 60px -15px rgba(84, 170, 181, 0.3); /* Sombra celeste al pasar el mouse */
-}
-
-/* En pantallas grandes (PC), los ponemos uno al lado del otro */
-@media (min-width: 992px) {
-  .segment-super-card {
-    flex-direction: row;
-  }
-  .segment-super-card.reverse {
-    flex-direction: row-reverse; /* El truco del zig-zag */
-  }
-}
-
-/* Contenedor de la imagen */
-.segment-img-wrapper {
-  flex: 1;
-  min-height: 300px;
-  background-color: var(--surface-container-high); /* Color gris de seguridad por si no hay internet */
-}
-
-.segment-img-wrapper img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-/* Contenedor del texto (¡El tamaño masivo está aquí!) */
-.segment-super-content {
-  flex: 1.2; /* Le da un poquito más de espacio al texto que a la foto */
-  padding: 4rem; /* Mucho aire para que respire la lectura */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-}
-
-/* La etiquetita superior */
-.segment-tag {
-  background-color: var(--primary-fixed);
-  color: var(--on-secondary-container);
-  padding: 0.5rem 1rem;
-  border-radius: 50px;
-  font-size: 0.85rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 1.5rem;
-}
-
-.segment-super-content h3 {
-  font-size: 2.5rem;
-  color: var(--primary);
-  margin-bottom: 1rem;
-  line-height: 1.2;
-}
-
-.segment-super-content p {
-  font-size: 1.125rem;
-  color: var(--on-surface-variant);
-  margin-bottom: 2.5rem;
-  line-height: 1.7;
-}
-
-/* La lista con checks */
-.pro-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
-  margin-bottom: 3rem;
-}
-
-.pro-list li {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  font-weight: 600;
-  color: var(--on-surface);
-  font-size: 1.05rem;
-}
-
-/* Fuerzo a que los checks se vean sí o sí con la fuente de iconos */
-.icon-check {
-  font-family: 'Material Symbols Outlined' !important;
-  color: var(--primary);
-  font-size: 1.8rem;
-}
-
-/* Botón secundario para la tarjeta */
-.btn-outline {
-  display: inline-block;
-  background: transparent;
-  border: 2px solid var(--primary);
-  color: var(--primary);
-  font-weight: 700;
-  padding: 0.8rem 1.8rem;
-  border-radius: 0.5rem;
-  font-size: 1rem;
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-
-.btn-outline:hover {
-  background: var(--primary);
-  color: white;
-  transform: translateY(-2px);
-}
-
-
-/* =========================================
-   ELEMENTOS ENRIQUECIDOS PARA LAS TARJETAS
-   ========================================= */
-
-/* Estilo para la frase gancho (llama la atención rápido) */
-.segment-hook {
-  font-size: 1.25rem !important;
-  font-weight: 700;
-  color: var(--on-surface) !important; /* Más oscuro para resaltar */
-  margin-bottom: 1rem !important;
-  line-height: 1.4 !important;
-  border-left: 4px solid var(--primary);
-  padding-left: 1rem;
-}
-
-/* Descripción normal ajustada */
-.segment-description {
-  font-size: 1.1rem !important;
-  color: var(--on-surface-variant) !important;
-  margin-bottom: 2rem !important;
-  line-height: 1.7 !important;
-}
-
-/* La nueva caja de Beneficio Destacado */
-.segment-highlight {
-  display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-  background-color: var(--surface-container-low);
-  border: 1px solid var(--surface-container-high);
-  padding: 1.5rem;
-  border-radius: 12px;
-  margin-bottom: 2rem;
-  width: 100%;
-}
-
-.icon-highlight {
-  color: var(--primary);
-  font-size: 2.5rem;
-  background: white;
-  padding: 0.5rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-}
-
-.highlight-text {
-  display: flex;
-  flex-direction: column;
-  gap: 0.3rem;
-}
-
-.highlight-text strong {
-  font-size: 1.1rem;
-  color: var(--primary);
-  font-family: 'Manrope', sans-serif;
-}
-
-.highlight-text span {
-  font-size: 0.95rem;
-  color: var(--on-surface-variant);
-  line-height: 1.4;
-}
-/* =========================================
-   DISEÑO PROFESIONAL DE SEGMENTOS (V2)
-   ========================================= */
-
-.pro-segments-section {
-    padding: 6rem 0;
-}
-
-.pro-segments-container {
-    display: flex;
-    flex-direction: column;
-    gap: 5rem;
-    margin-top: 4rem;
-}
-
-/* La tarjeta principal (Fondo blanco, sombra suave y bordes redondeados) */
-.pro-segment-card {
-    display: flex;
-    flex-direction: column;
-    background: #ffffff;
-    border-radius: 24px;
-    overflow: hidden;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.06);
-    border: 1px solid var(--surface-container-high);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.pro-segment-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 25px 50px rgba(84, 170, 181, 0.2);
-}
-
-/* Magia de PC: Poner imagen y texto lado a lado (50/50) */
-@media(min-width: 992px) {
-    .pro-segment-card {
-        flex-direction: row;
-        align-items: stretch;
-    }
-    .pro-segment-card.reverse {
-        flex-direction: row-reverse; /* Hace el efecto Zig-Zag */
-    }
-}
-
-/* Contenedor de la Imagen */
-.pro-segment-image {
-    flex: 1;
-    min-height: 350px;
-}
-
-.pro-segment-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-/* Contenedor de los Textos */
-.pro-segment-body {
-    flex: 1.1;
-    padding: 4rem 3.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-/* Etiqueta superior (Badge) */
-.pro-badge {
-    align-self: flex-start;
-    background: var(--primary-fixed);
-    color: var(--on-secondary-container);
-    padding: 0.5rem 1rem;
-    border-radius: 50px;
-    font-size: 0.85rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 1.5rem;
-}
-
-.pro-segment-body h3 {
-    font-size: 2.3rem;
-    color: var(--primary);
-    margin-bottom: 1rem;
-    line-height: 1.2;
-}
-
-/* Frase gancho */
-.pro-lead {
-    font-size: 1.15rem;
-    font-weight: 700;
-    color: var(--on-surface);
-    margin-bottom: 1rem;
-    border-left: 4px solid var(--primary);
-    padding-left: 1rem;
-    line-height: 1.4;
-}
-
-/* Texto descriptivo */
-.pro-text {
-    color: var(--on-surface-variant);
-    line-height: 1.7;
-    font-size: 1.05rem;
-    margin-bottom: 2rem;
-}
-
-/* Caja de Beneficio Destacado */
-.pro-highlight {
-    background: var(--surface-container-low);
-    border: 1px solid var(--surface-container-high);
-    padding: 1.2rem;
-    border-radius: 12px;
-    display: flex;
-    gap: 1rem;
-    align-items: flex-start;
-    margin-bottom: 2rem;
-}
-
-.pro-highlight .material-symbols-outlined {
-    color: var(--primary);
-    font-size: 2.2rem;
-    background: white;
-    padding: 0.5rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-}
-
-.pro-highlight-text strong {
-    display: block;
-    color: var(--primary);
-    font-size: 1.1rem;
-    margin-bottom: 0.2rem;
-    font-family: 'Manrope', sans-serif;
-}
-
-.pro-highlight-text span {
-    font-size: 0.95rem;
-    color: var(--on-surface-variant);
-    line-height: 1.4;
-}
-
-/* Lista de checks */
-.pro-features {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 2.5rem 0;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.pro-features li {
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-    color: var(--on-surface);
-    font-weight: 600;
-    font-size: 1rem;
-}
-
-.pro-features .material-symbols-outlined {
-    color: var(--primary);
-}
-
-/* Botón interactivo */
-.pro-btn {
-    align-self: flex-start;
-    border: 2px solid var(--primary);
-    color: var(--primary);
-    padding: 0.8rem 2rem;
-    border-radius: 8px;
-    font-weight: 700;
-    transition: all 0.3s;
-    text-decoration: none;
-}
-
-.pro-btn:hover {
-    background: var(--primary);
-    color: white;
-    transform: translateY(-2px);
 }
