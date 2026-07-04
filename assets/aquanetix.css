@@ -911,3 +911,44 @@ ul {
   gap: 10px;
   color: var(--primary); 
 }
+/* =========================================
+   PLANTILLA DE VIDEO EN "AQUANETIX CENTRALIZE"
+   ========================================= */
+
+.product-video-wrapper {
+  margin-top: 2.5rem;
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* Proporción exacta de 16:9 para videos */
+  background-color: rgba(255, 255, 255, 0.1); /* Fondo semitransparente elegante */
+  border-radius: 0.75rem;
+  border: 2px dashed rgba(255, 255, 255, 0.3); /* Borde punteado para indicar que es un espacio reservado */
+  overflow: hidden;
+}
+
+.video-placeholder {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 600;
+  text-align: center;
+}
+
+.video-placeholder .material-symbols-outlined {
+  font-size: 3.5rem;
+  margin-bottom: 0.5rem;
+  opacity: 0.8;
+}
+
+/* Estilo para cuando ya pongas el iframe real */
+.product-video-wrapper iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  border: none;
+  border-radius: 0.75rem;
+}
